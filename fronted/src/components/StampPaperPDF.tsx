@@ -2,9 +2,7 @@ import {
   Page,
   Text,
   View,
-  Document,
   StyleSheet,
-  Image,
 } from "@react-pdf/renderer";
 
 // Create styles mimicking Tailwind
@@ -54,8 +52,7 @@ const styles = StyleSheet.create({
 });
 
 export const StampPaperPDF = ({ value = "₹100" }) => (
-  <Document>
-    <Page size="A4" style={styles.page}>
+    <Page  size="LEGAL" style={styles.page}>
       <View style={styles.borderBox}>
         <Text style={styles.header}>India Non Judicial</Text>
         
@@ -77,5 +74,4 @@ export const StampPaperPDF = ({ value = "₹100" }) => (
         </View>
       </View>
     </Page>
-  </Document>
 );
